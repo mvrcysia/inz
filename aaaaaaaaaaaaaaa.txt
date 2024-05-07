@@ -1,0 +1,22 @@
+W pliku AndroidManifest.xml:
+
+Copy code
+<activity
+    android:name=".YourActivity"
+    android:screenOrientation="portrait">
+    <!-- Ustawia orientację ekranu na pionową (portrait) -->
+</activity>
+
+
+
+
+Dynamicznie w kodzie (w metodzie onCreate() Twojej aktywności):
+kotlin
+Copy code
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+    // Ustawia orientację ekranu na pionową (portrait)
+    setContentView(R.layout.activity_main)
+    // Pozostała część kodu
+}
